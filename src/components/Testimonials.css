@@ -1,0 +1,87 @@
+/* General Styles for Testimonials Section */
+.testimonials {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 2.5rem;
+    color: #1F2833;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Testimonials Cards Layout */
+  .testimonial-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+  }
+  
+  .testimonial-cards .card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px; /* Ensure cards do not get too small */
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect for Testimonials Cards */
+  .testimonial-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .testimonial-cards .card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-cards .card h3 {
+    font-size: 1.2rem;
+    color: #1F2833;
+    margin-bottom: 5px;
+  }
+  
+  .testimonial-cards .card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-cards .card .role {
+    font-size: 0.9rem;
+    color: #66FCF1;
+  }
+  
+  /* Arrow Navigation for Mobile (if needed) */
+  @media (max-width: 768px) {
+    .testimonial-cards {
+      flex-direction: column;
+    }
+  
+    .testimonial-cards .card {
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Optional Styling for Button or Link if added */
+  .testimonial-cards .card a {
+    text-decoration: none;
+    color: #45A29E;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .testimonial-cards .card a:hover {
+    color: #66FCF1;
+  }
+  

@@ -1,0 +1,105 @@
+/* Basic Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.8);  /* Slightly darker for contrast */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);  /* Stronger shadow */
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #66FCF1;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 60px;  /* Increased gap between items for more space */
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;  /* Slightly larger font size for better readability */
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+  color: #66FCF1;
+  transform: scale(1.1);  /* Slight hover zoom effect */
+}
+
+.navbar .login {
+  background-color: #45A29E;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;  /* More rounded button */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .login:hover {
+  background-color: #66FCF1;
+  transform: scale(1.05);
+}
+
+.navbar .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Show the Hamburger Icon on Mobile */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;  /* Hide menu by default on small screens */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 90%;  /* Slightly smaller width */
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);  /* Drop shadow for better visibility */
+  }
+
+  .navbar .nav-links.active {
+    display: flex;  /* Show menu when active */
+  }
+
+  .navbar .menu-toggle {
+    display: block;  /* Show hamburger icon */
+  }
+
+  .navbar .nav-links li {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .navbar .logo {
+    font-size: 1.8rem;  /* Slightly smaller logo for mobile */
+  }
+
+  .navbar .login {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
